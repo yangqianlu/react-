@@ -1,7 +1,7 @@
 
 
 // 字符集合
-const RANDOM_STR = 'qwertyuiopasdfghjklzxcvbnm1234567890!@#$%^&*()_+MNBVCXZLKJHGFDSAPOIUYTREWQ';
+const RANDOM_STR = 'qwe';
 class Utils {
     //根据不同环境 返回不同url
     setUrl() {
@@ -23,6 +23,16 @@ class Utils {
         return url
 
     }
-   
+    // 获取随机字符
+    getRandomStr() {
+        const index = parseInt(Math.random() * RANDOM_STR.length,10)
+        return RANDOM_STR.charAt(index)
+    }
+     // 获取对应长度的随机字符
+     getRandomLength = (length) => {
+        return Array.from({length},()=>this.getRandomStr()).join('')
+    }
+
+
 }
 export default new Utils
