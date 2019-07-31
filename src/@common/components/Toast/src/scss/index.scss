@@ -1,0 +1,128 @@
+.ic-toast-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 8%;
+  text-align: center;
+  z-index: 99999;
+  opacity: 1;
+
+  @keyframes ic-toast-animation {
+    0% {
+      top: 50px;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    20% {
+      top: 100px;
+    }
+    30% {
+      top: 80px;
+    }
+    70% {
+      top: 80px;
+      opacity: 1;
+    }
+    100% {
+      top: 80px;
+      opacity: 0;
+    }
+  }
+  .ic-toast {
+    display: inline-block;
+    font-size: 12px;
+    padding: 0 20px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    min-width: 150px;
+    letter-spacing: 0.09px;
+    background-color: #fff;
+    color: #000;
+    background: #ffffff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 17px;
+    // 减去导航宽度
+    // margin-left: 270px;
+
+    .u-icon {
+      margin-right: 6px;
+      font-size: 14px;
+      vertical-align: -1px;
+    }
+  }
+
+  &.ic-toast-info {
+    .ic-toast {
+      background-color: #fff;
+    }
+  }
+
+  &.ic-toast-success {
+    .ic-toast {
+      .u-icon {
+        color: #3dbd7d;
+      }
+    }
+  }
+
+  &.ic-toast-warning {
+    .ic-toast {
+      .u-icon {
+        color: #ffbf00;
+      }
+    }
+  }
+
+  &.ic-toast-error {
+    .ic-toast {
+      .u-icon {
+        color: #fc3333;
+      }
+    }
+  }
+
+  &.ic-toast-top {
+    .ic-toast,
+    &:after {
+      vertical-align: top;
+    }
+  }
+
+  &.ic-toast-middle {
+    .ic-toast,
+    &:after {
+      vertical-align: middle;
+    }
+  }
+
+  &.ic-toast-bottom {
+    .ic-toast,
+    &:after {
+      vertical-align: bottom;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0;
+  }
+}
+
+// 1440 - 1920尺寸
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  .ic-toast {
+    // margin-left: 300px;
+  }
+}
+
+// 1920+尺寸
+@media screen and (min-width: 1920px) {
+  .ic-toast {
+    // margin-left: 340px;
+  }
+}

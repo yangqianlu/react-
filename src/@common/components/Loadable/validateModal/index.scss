@@ -1,0 +1,6 @@
+.validate_container {
+  margin-top: 40px;
+  .ant-form-item-required::before {
+    content: '';
+  }
+}

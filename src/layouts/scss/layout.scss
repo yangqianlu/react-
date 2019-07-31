@@ -1,0 +1,52 @@
+.u-container {
+  min-width: 1240px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.u-body {
+  position: relative;
+  margin-left: 250px;
+  height: calc(100vh - 50px);
+}
+.isT {
+  margin-left: 0px;
+}
+.u-main {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.u-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
+  position: absolute;
+  top: 65px;
+}
+.u-content {
+  width: 100%;
+  // padding-left: 40px;
+  // padding-right: 40px;
+  // margin: 24px auto 0;
+  // 屏幕高度 - 底部高度 - 底部padding - 导航高度 - 内容区域与导航的间距
+  min-height: calc(100vh - 50px - 22px - 50px - 24px);
+}
+.u-side {
+  width: 260px;
+}
+.side-u {
+  width: 6px;
+}
+.j-body {
+  margin-left: 40px;
+}
